@@ -405,7 +405,7 @@ try:
                 "Enter your Groq API Key (gsk_yA...):", "", type="password"
             )
 
-        topic_text = st.text_input(
+        topic_text = st.text_area(
             "What do you want the book to be about?",
             value="",
             help="Enter the main topic or title of your book",
