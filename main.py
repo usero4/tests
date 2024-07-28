@@ -305,7 +305,7 @@ def generate_book_structure(prompt: str):
 
 def generate_section(prompt: str, additional_instructions: str):
     stream = st.session_state.groq.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="llama-3.1-70b-versatile",
         messages=[
             {
                 "role": "system",
