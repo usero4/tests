@@ -309,11 +309,11 @@ def generate_section(prompt: str, additional_instructions: str):
         messages=[
             {
                 "role": "system",
-                "content": "You are an expert code writer. Generate a long, comprehensive, structured code for the section provided. If additional instructions are provided, consider them very important. Only output the content.",
+                "content": "You are an expert code writer. Generate a correct, comprehensive, structured code for the section provided. If additional instructions are provided, consider them very important. Only output the content.",
             },
             {
                 "role": "user",
-                "content": f"Generate a long, comprehensive, structured code. Use the following section and important instructions:\n\n<section_title>{prompt}</section_title>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
+                "content": f"Generate a correct, comprehensive, structured code. Use the following section and important instructions:\n\n<section_title>{prompt}</section_title>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
             },
         ],
         temperature=0.3,
