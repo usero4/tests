@@ -250,11 +250,11 @@ def generate_book_title(prompt: str):
         messages=[
             {
                 "role": "system",
-                "content": "Generate suitable app titles for the provided topics. There is only one generated app title! Don't give any explanation or add any symbols, just write the title of the app. The requirement for this title is that it must be between 7 and 25 words long, and it must be attractive enough!"
+                "content": "Generate suitable app idea for the provided topics. There is only one generated app idea! Don't give any explanation or add any symbols, just write the idea of the app. The requirement for this idea is that it must be between 7 and 25 words long.!"
             },
             {
                 "role": "user",
-                "content": f"Generate a app title for the following topic. There is only one generated app title! Don't give any explanation or add any symbols, just write the title of the app. The requirement for this title is that it must be at least 7 words and 25 words long, and it must be attractive enough:\n\n{prompt}"
+                "content": f"Generate a app idea for the following topic. There is only one generated app idea! Don't give any explanation or add any symbols, just write the idea of the app. The requirement for this title is that it must be at least 7 words and 25 words long.:\n\n{prompt}"
             }
         ],
         temperature=0.7,
@@ -279,7 +279,7 @@ def generate_book_structure(prompt: str):
             },
             {
                 "role": "user",
-                "content": f"Write a comprehensive structure, omiting introduction and conclusion sections (forward, author's note, summary), for a long (>300 page) code. It is very important that use the following subject and additional instructions to write the code. \n\n<subject>{prompt}</subject>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
+                "content": f"Write a comprehensive structure, for a big (>300 page) application. It is very important that use the following subject and additional instructions to write the app. \n\n<subject>{prompt}</subject>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
             },
         ],
         temperature=0.3,
