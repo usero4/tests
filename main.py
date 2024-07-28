@@ -250,11 +250,11 @@ def generate_book_title(prompt: str):
         messages=[
             {
                 "role": "system",
-                "content": "Generate suitable book titles for the provided topics. There is only one generated book title! Don't give any explanation or add any symbols, just write the title of the book. The requirement for this title is that it must be between 7 and 25 words long, and it must be attractive enough!"
+                "content": "Generate suitable app titles for the provided topics. There is only one generated app title! Don't give any explanation or add any symbols, just write the title of the app. The requirement for this title is that it must be between 7 and 25 words long, and it must be attractive enough!"
             },
             {
                 "role": "user",
-                "content": f"Generate a book title for the following topic. There is only one generated book title! Don't give any explanation or add any symbols, just write the title of the book. The requirement for this title is that it must be at least 7 words and 25 words long, and it must be attractive enough:\n\n{prompt}"
+                "content": f"Generate a app title for the following topic. There is only one generated app title! Don't give any explanation or add any symbols, just write the title of the app. The requirement for this title is that it must be at least 7 words and 25 words long, and it must be attractive enough:\n\n{prompt}"
             }
         ],
         temperature=0.7,
@@ -279,7 +279,7 @@ def generate_book_structure(prompt: str):
             },
             {
                 "role": "user",
-                "content": f"Write a comprehensive structure, omiting introduction and conclusion sections (forward, author's note, summary), for a long (>300 page) book. It is very important that use the following subject and additional instructions to write the book. \n\n<subject>{prompt}</subject>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
+                "content": f"Write a comprehensive structure, omiting introduction and conclusion sections (forward, author's note, summary), for a long (>300 page) code. It is very important that use the following subject and additional instructions to write the code. \n\n<subject>{prompt}</subject>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
             },
         ],
         temperature=0.3,
@@ -309,11 +309,11 @@ def generate_section(prompt: str, additional_instructions: str):
         messages=[
             {
                 "role": "system",
-                "content": "You are an expert writer. Generate a long, comprehensive, structured chapter for the section provided. If additional instructions are provided, consider them very important. Only output the content.",
+                "content": "You are an expert code writer. Generate a long, comprehensive, structured code for the section provided. If additional instructions are provided, consider them very important. Only output the content.",
             },
             {
                 "role": "user",
-                "content": f"Generate a long, comprehensive, structured chapter. Use the following section and important instructions:\n\n<section_title>{prompt}</section_title>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
+                "content": f"Generate a long, comprehensive, structured code. Use the following section and important instructions:\n\n<section_title>{prompt}</section_title>\n\n<additional_instructions>{additional_instructions}</additional_instructions>",
             },
         ],
         temperature=0.3,
